@@ -4,7 +4,7 @@ public class TttCell {
 
     public TttCell() {
         occupied = false;
-        player = 'x';
+        player = ' ';
     }
 
     public TttCell(boolean occupied, char player) {
@@ -33,6 +33,7 @@ public class TttCell {
         return "This cell is occupied:" + occupied +
                 ", by player:" + player;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == this) return true;
