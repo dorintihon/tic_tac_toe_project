@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 /**
  *
  */
-public class ttt implements ActionListener {
+public class TicTacToe implements ActionListener {
     char currentPlayer;
     JButton[][] buttons = new JButton[3][3];
     TttCell[][] cells = new TttCell[3][3];
@@ -26,14 +26,13 @@ public class ttt implements ActionListener {
                         if (currentPlayer == 'X') {
                             cells[i][j].setPlayer(currentPlayer);
                             buttons[i][j].setText(String.valueOf(cells[i][j].getPlayer()));
-
                             buttons[i][j].setForeground(new Color(175, 75, 75));
                             cells[i][j].setOccupied(true);
                             displayWinner();
                         } else {
                             cells[i][j].setPlayer(currentPlayer);
                             buttons[i][j].setText(String.valueOf(cells[i][j].getPlayer()));
-                            buttons[i][j].setForeground(new Color(54, 87, 44));;
+                            buttons[i][j].setForeground(new Color(54, 87, 44));
                             cells[i][j].setOccupied(true);
                             displayWinner();
                         }
@@ -44,7 +43,6 @@ public class ttt implements ActionListener {
                 }
             }
         }
-
     }
 
     public void initialize() {
@@ -156,8 +154,7 @@ public class ttt implements ActionListener {
 
 
     public static void main(String[] args) {
-        ttt t = new ttt();
+        TicTacToe t = new TicTacToe();
         t.initialize();
-
     }
 }
