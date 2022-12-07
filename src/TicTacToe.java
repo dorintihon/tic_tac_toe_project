@@ -66,6 +66,7 @@ public class TicTacToe implements ActionListener {
     public void startGame() {
         currentPlayer = 'X';
         frame = new JFrame("Tic Tac si Toe");
+        frame.setSize(550, 550);
 
         //JLabel object that shows at the top of the frame the current player
         textField = new JLabel();
@@ -77,6 +78,9 @@ public class TicTacToe implements ActionListener {
 
         //JPanel object that define the buttons
         JPanel buttonGrid = new JPanel();
+
+        //Setting grid layout of 3 rows and 3 columns
+        buttonGrid.setLayout(new GridLayout(3, 3));
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 buttons[i][j] = new JButton();
@@ -87,13 +91,7 @@ public class TicTacToe implements ActionListener {
                 buttonGrid.add(buttons[i][j]);
             }
         }
-
-        // setting grid layout of 3 rows and 3 columns
-        buttonGrid.setLayout(new GridLayout(3, 3));
-
-
         frame.add(buttonGrid);
-        frame.setSize(550, 550);
         frame.setVisible(true);
     }
 
